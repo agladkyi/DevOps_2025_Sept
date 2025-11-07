@@ -13,7 +13,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-west-3"
 }
 
 output "instance_public_ip" {
@@ -27,7 +27,7 @@ output "instance_public_dns" {
 }
 
 resource "aws_instance" "test_t3_micro" {
-  ami                    = "ami-0bdd88bd06d16ba03" # Amazon Linux 2023
+  ami                    = "ami-017f16157e7148709" # Amazon Linux 2023 for EU
   instance_type          = "t3.micro"              # Free tier
   vpc_security_group_ids = [aws_security_group.web-sg.id]
   user_data              = <<-EOF
