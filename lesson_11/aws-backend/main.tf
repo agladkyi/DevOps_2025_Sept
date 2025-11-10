@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket         = "pasv-course-iskrobot-tf-state" # REPLACE WITH YOUR BUCKET NAME
+    bucket         = "pasv-course-gladkyitfproject-tf-state" # REPLACE WITH YOUR BUCKET NAME
     key            = "backend/terraform.tfstate"
-    region         = "us-east-1"
+    region         = "eu-west-3"
     dynamodb_table = "terraform-state-locking"
     encrypt        = true
   }
@@ -16,7 +16,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-west-3"
 }
 
 resource "aws_s3_bucket" "terraform_state" {
