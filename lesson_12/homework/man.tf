@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket         = "pasv-course-iskrobot-tf-state"
+    bucket         = "pasv-course-gladkyitfproject-tf-state"
     key            = "main/demo_terraform.tfstate"
-    region         = "us-east-1"
+    region         = "eu-west-3"
     dynamodb_table = "terraform-state-locking"
     encrypt        = true
   }
@@ -11,7 +11,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-west-3"
 }
 
 module "ec2" {
@@ -29,4 +29,12 @@ variable "env" {
 variable "ni" {
   description = "Number of istances to create"
   type        = number
+}
+
+output "ec2_instance_ids" {
+  value = module.ec2.instance_ids
+}
+
+output "ec2_public_ips" {
+  value = module.ec2.public_ips
 }
