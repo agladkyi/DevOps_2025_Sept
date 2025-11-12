@@ -17,7 +17,7 @@ locals {
 
   ports = [22, 80, 443]
 
-  ami = "ami-0bdd88bd06d16ba03" # Amazon Linux 2023
+  ami = "ami-0d3684aec6d12c883" # Amazon Linux 2023
 }
 
 
