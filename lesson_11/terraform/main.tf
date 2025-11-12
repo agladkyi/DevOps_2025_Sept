@@ -27,7 +27,7 @@ provider "aws" {
 locals {
   common_tags = {
     Environment = var.environment
-    Project     = "MyApplication"
+    Project     = "MyApplication_backend"
     ManagedBy   = "Terraform"
   }
 }
@@ -45,6 +45,8 @@ resource "aws_instance" "test_t3_micro" {
       Name = "HelloWorld Server ${count.index + 1}"
     }
   )
+
+  depends_on = [aws_security_group.web-sg]
 }
 
 resource "random_pet" "sg" {}
