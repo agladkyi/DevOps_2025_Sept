@@ -1,7 +1,7 @@
 variable "region" {
   description = "AWS region to deploy into"
   type        = string
-  default     = "us-west-2"
+  default     = "eu-west-3"
 }
 
 variable "vpc_cidr" {
