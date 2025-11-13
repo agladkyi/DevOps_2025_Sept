@@ -9,14 +9,8 @@ data "aws_ami" "al2023" {
   }
 }
 
-# User data template to install Flask app and systemd service
-data "template_file" "user_data" {
-  template = file("${path.module}/user_data.sh.tftpl")
-  vars = {
-    bucket_name = aws_s3_bucket.photos.bucket
-    web_port    = local.web_port
-  }
-}
+# Replace old data.template_file with modern templatefile()
+# No "data template_file" block needed — REMOVE IT.
 
 resource "aws_instance" "web" {
   ami                    = data.aws_ami.al2023.id
@@ -27,7 +21,11 @@ resource "aws_instance" "web" {
 
   iam_instance_profile = aws_iam_instance_profile.ec2_instance_profile.name
 
-  user_data = data.template_file.user_data.rendered
+  # NEW CORRECT USER DATA
+  user_data = templatefile("${path.module}/user_data.sh.tftpl", {
+    bucket_name = aws_s3_bucket.photos.bucket
+    web_port    = local.web_port
+  })
 
   tags = {
     Name = "${local.name_prefix}-ec2"
