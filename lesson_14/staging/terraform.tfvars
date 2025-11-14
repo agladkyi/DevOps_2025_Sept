@@ -1,3 +1,3 @@
-region        = "us-east-1"
-bucket_name   = "pasv-course-iskrobot-photos-staging"
+region        = "eu-west-3"
+bucket_name   = "pasv-course-gladkyi-photos-staging"
 instance_type = "t3.micro"
