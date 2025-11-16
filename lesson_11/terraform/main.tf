@@ -33,13 +33,9 @@ locals {
 }
 
 resource "aws_instance" "test_t3_micro" {
-<<<<<<< HEAD
   count = var.number_of_instances
 
   ami                    = "ami-0bdd88bd06d16ba03" # Amazon Linux 2023
-=======
-  ami                    = "ami-017f16157e7148709" # Amazon Linux 2023
->>>>>>> 98c435a (home work / lesson 11 - 12)
   instance_type          = "t3.micro"              # Free tier
   vpc_security_group_ids = [aws_security_group.web-sg.id]
   user_data              = file("${path.module}/user_data.sh")
@@ -93,16 +89,11 @@ resource "aws_security_group" "web-sg" {
 
 output "instance_public_ip" {
   description = "The public IP address of the EC2 instance"
-<<<<<<< HEAD
   value       = [for instance in aws_instance.test_t3_micro : instance.public_ip]
-=======
-  value = [for instance in aws_instance.test_t3_micro : instance.public_ip]
->>>>>>> 98c435a (home work / lesson 11 - 12)
 }
 
 output "instance_public_dns" {
   description = "The public DNS of the EC2 instance"
-<<<<<<< HEAD
   value       = [for instance in aws_instance.test_t3_micro : instance.public_dns]
 }
 
@@ -115,7 +106,4 @@ data "aws_ami" "amazon_linux" {
     name   = "name"
     values = ["amzn2-ami-hvm-*-x86_64-gp2"]
   }
-=======
-  value = [for instance in aws_instance.test_t3_micro : instance.public_dns]
->>>>>>> 98c435a (home work / lesson 11 - 12)
 }
