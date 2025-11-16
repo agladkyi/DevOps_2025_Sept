@@ -4,12 +4,12 @@
   become: yes
 
   tasks:
-    - name: Update apt cache
-      apt:
+    - name: Update yum cache
+      yum:
         update_cache: yes
 
     - name: Install Ngnx
-      apt:
+      yum:
         name: nginx
         state: present
 

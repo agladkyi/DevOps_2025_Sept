@@ -33,6 +33,7 @@ locals {
 }
 
 resource "aws_instance" "test_t3_micro" {
+
   ami                    = "ami-017f16157e7148709" # Amazon Linux 2023
   instance_type          = "t3.micro"              # Free tier
   vpc_security_group_ids = [aws_security_group.web-sg.id]
