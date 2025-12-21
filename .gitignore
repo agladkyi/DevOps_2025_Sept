@@ -10,4 +10,16 @@ terraform.tfstate.*
 terraform.tfvars
 .venv*
 *.pem
-.ansible
+lib/
+bin/
+lib64/
+lib64
+**/lib/**/site-packages/
+__pycache__/
+*.pyc
+env/
+ENV/
+venv/
+env.bak/
+venv.bak/
+pyvenv*
