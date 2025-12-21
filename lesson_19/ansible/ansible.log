@@ -2408,3 +2408,1679 @@ Nov 22 03:27:17 ip-172-31-68-90 systemd[1]: Started The Apache HTTP Server.
 2025-11-21 20:09:14,790 p=2753377 u=ivan n=ansible INFO| PLAY RECAP ************************************************************************************************************************
 2025-11-21 20:09:14,796 p=2753377 u=ivan n=ansible INFO| web1                       : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2025-11-21 20:09:14,798 p=2753377 u=ivan n=ansible INFO| web2                       : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-29 19:25:37,915 p=3254 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web2' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 19:25:37,916 p=3254 u=gladkyi n=ansible INFO| web2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-11-29 19:25:37,938 p=3254 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 19:25:37,938 p=3254 u=gladkyi n=ansible INFO| web1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-11-29 19:25:38,056 p=3254 u=gladkyi n=ansible WARNING| [WARNING]: Host 'db1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 19:25:38,056 p=3254 u=gladkyi n=ansible INFO| db1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2025-11-29 20:46:25,154 p=4759 u=gladkyi n=ansible WARNING| [WARNING]: Host 'db1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 20:46:25,155 p=4759 u=gladkyi n=ansible INFO| db1 | CHANGED | rc=0 >>
+ 19:46:24 up  1:47,  1 user,  load average: 0.00, 0.00, 0.00
+
+2025-11-29 20:46:25,287 p=4759 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 20:46:25,287 p=4759 u=gladkyi n=ansible INFO| web1 | CHANGED | rc=0 >>
+ 19:46:24 up  1:47,  1 user,  load average: 0.08, 0.02, 0.01
+
+2025-11-29 20:46:25,895 p=4759 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web2' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 20:46:25,895 p=4759 u=gladkyi n=ansible INFO| web2 | CHANGED | rc=0 >>
+ 19:46:25 up  1:47,  1 user,  load average: 0.00, 0.00, 0.00
+
+2025-11-29 20:46:59,622 p=4805 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 20:46:59,623 p=4805 u=gladkyi n=ansible ERROR| [ERROR]: Task failed: Module failed: '/usr/bin/apt-mark manual htop' failed: E: Could not create temporary file for /var/lib/apt/extended_states - mkstemp (13: Permission denied)
+E: Failed to write temporary StateFile /var/lib/apt/extended_states
+
+Origin: <adhoc 'apt' task>
+
+{'action': 'apt', 'args': {'name': 'htop', 'state': 'present'}, 'timeout': 0, 'async_val': 0, 'poll': 15}
+
+
+2025-11-29 20:46:59,624 p=4805 u=gladkyi n=ansible INFO| web1 | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "msg": "'/usr/bin/apt-mark manual htop' failed: E: Could not create temporary file for /var/lib/apt/extended_states - mkstemp (13: Permission denied)\nE: Failed to write temporary StateFile /var/lib/apt/extended_states\n",
+    "rc": 100,
+    "stderr": "E: Could not create temporary file for /var/lib/apt/extended_states - mkstemp (13: Permission denied)\nE: Failed to write temporary StateFile /var/lib/apt/extended_states\n",
+    "stderr_lines": [
+        "E: Could not create temporary file for /var/lib/apt/extended_states - mkstemp (13: Permission denied)",
+        "E: Failed to write temporary StateFile /var/lib/apt/extended_states"
+    ],
+    "stdout": "",
+    "stdout_lines": []
+}
+2025-11-29 20:46:59,625 p=4805 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web2' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 20:46:59,625 p=4805 u=gladkyi n=ansible INFO| web2 | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "msg": "'/usr/bin/apt-mark manual htop' failed: E: Could not create temporary file for /var/lib/apt/extended_states - mkstemp (13: Permission denied)\nE: Failed to write temporary StateFile /var/lib/apt/extended_states\n",
+    "rc": 100,
+    "stderr": "E: Could not create temporary file for /var/lib/apt/extended_states - mkstemp (13: Permission denied)\nE: Failed to write temporary StateFile /var/lib/apt/extended_states\n",
+    "stderr_lines": [
+        "E: Could not create temporary file for /var/lib/apt/extended_states - mkstemp (13: Permission denied)",
+        "E: Failed to write temporary StateFile /var/lib/apt/extended_states"
+    ],
+    "stdout": "",
+    "stdout_lines": []
+}
+2025-11-29 20:49:46,657 p=4882 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 20:49:46,658 p=4882 u=gladkyi n=ansible INFO| web1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "cache_update_time": 1764439144,
+    "cache_updated": false,
+    "changed": false
+}
+2025-11-29 20:49:46,713 p=4882 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web2' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 20:49:46,713 p=4882 u=gladkyi n=ansible INFO| web2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "cache_update_time": 1764439144,
+    "cache_updated": false,
+    "changed": false
+}
+2025-11-29 20:54:24,640 p=5045 u=gladkyi n=ansible INFO| PLAY [Configure web servers (Ubuntu only)] ***************************************************************************************************************************************************************
+2025-11-29 20:54:24,644 p=5045 u=gladkyi n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-11-29 20:54:29,611 p=5045 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web2' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 20:54:29,611 p=5045 u=gladkyi n=ansible INFO| ok: [web2]
+2025-11-29 20:54:29,613 p=5045 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 20:54:29,613 p=5045 u=gladkyi n=ansible INFO| ok: [web1]
+2025-11-29 20:54:29,615 p=5045 u=gladkyi n=ansible INFO| TASK [webserver : Update apt cache] **********************************************************************************************************************************************************************
+2025-11-29 20:54:34,689 p=5045 u=gladkyi n=ansible INFO| changed: [web1]
+2025-11-29 20:54:34,796 p=5045 u=gladkyi n=ansible INFO| changed: [web2]
+2025-11-29 20:54:34,798 p=5045 u=gladkyi n=ansible INFO| TASK [webserver : Install webserver package] *************************************************************************************************************************************************************
+2025-11-29 20:54:54,493 p=5045 u=gladkyi n=ansible INFO| The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils bzip2 libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.3-0 mailcap mime-support
+  ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser
+  bzip2-doc
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils bzip2 libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.3-0 mailcap mime-support
+  ssl-cert
+0 upgraded, 13 newly installed, 0 to remove and 8 not upgraded.
+2025-11-29 20:54:54,494 p=5045 u=gladkyi n=ansible INFO| changed: [web1]
+2025-11-29 20:54:55,115 p=5045 u=gladkyi n=ansible INFO| The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils bzip2 libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.3-0 mailcap mime-support
+  ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser
+  bzip2-doc
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils bzip2 libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.3-0 mailcap mime-support
+  ssl-cert
+0 upgraded, 13 newly installed, 0 to remove and 8 not upgraded.
+2025-11-29 20:54:55,116 p=5045 u=gladkyi n=ansible INFO| changed: [web2]
+2025-11-29 20:54:55,119 p=5045 u=gladkyi n=ansible INFO| TASK [webserver : Deploy virtual host configuration from template] ***************************************************************************************************************************************
+2025-11-29 20:55:07,266 p=5045 u=gladkyi n=ansible INFO| [0;31m--- before: /etc/apache2/sites-available/000-default.conf[0m
+[0;31m[0m[0;32m+++ after: /Users/gladkyi/.ansible/tmp/ansible-local-5045fi_xed7q/tmpqmst3uln/vhost.conf.j2[0m
+[0;32m[0m[0;36m@@ -1,31 +1,15 @@[0m
+[0;36m[0m <VirtualHost *:80>
+[0;31m-	# The ServerName directive sets the request scheme, hostname and port that[0m
+[0;31m[0m[0;31m-	# the server uses to identify itself. This is used when creating[0m
+[0;31m[0m[0;31m-	# redirection URLs. In the context of virtual hosts, the ServerName[0m
+[0;31m[0m[0;31m-	# specifies what hostname must appear in the request's Host: header to[0m
+[0;31m[0m[0;31m-	# match this virtual host. For the default virtual host (this file) this[0m
+[0;31m[0m[0;31m-	# value is not decisive as it is used as a last resort host regardless.[0m
+[0;31m[0m[0;31m-	# However, you must set it for any further virtual host explicitly.[0m
+[0;31m[0m[0;31m-	#ServerName www.example.com[0m
+[0;31m[0m[0;32m+    ServerAdmin webmaster@example.local[0m
+[0;32m[0m[0;32m+    ServerName example.local[0m
+[0;32m[0m 
+[0;31m-	ServerAdmin webmaster@localhost[0m
+[0;31m[0m[0;31m-	DocumentRoot /var/www/html[0m
+[0;31m[0m[0;32m+    DocumentRoot /var/www/html[0m
+[0;32m[0m 
+[0;31m-	# Available loglevels: trace8, ..., trace1, debug, info, notice, warn,[0m
+[0;31m[0m[0;31m-	# error, crit, alert, emerg.[0m
+[0;31m[0m[0;31m-	# It is also possible to configure the loglevel for particular[0m
+[0;31m[0m[0;31m-	# modules, e.g.[0m
+[0;31m[0m[0;31m-	#LogLevel info ssl:warn[0m
+[0;31m[0m[0;32m+    <Directory /var/www/html>[0m
+[0;32m[0m[0;32m+        Options Indexes FollowSymLinks[0m
+[0;32m[0m[0;32m+        AllowOverride None[0m
+[0;32m[0m[0;32m+        Require all granted[0m
+[0;32m[0m[0;32m+    </Directory>[0m
+[0;32m[0m 
+[0;31m-	ErrorLog ${APACHE_LOG_DIR}/error.log[0m
+[0;31m[0m[0;31m-	CustomLog ${APACHE_LOG_DIR}/access.log combined[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-	# For most configuration files from conf-available/, which are[0m
+[0;31m[0m[0;31m-	# enabled or disabled at a global level, it is possible to[0m
+[0;31m[0m[0;31m-	# include a line for only one particular virtual host. For example the[0m
+[0;31m[0m[0;31m-	# following line enables the CGI configuration for this host only[0m
+[0;31m[0m[0;31m-	# after it has been globally disabled with "a2disconf".[0m
+[0;31m[0m[0;31m-	#Include conf-available/serve-cgi-bin.conf[0m
+[0;31m[0m[0;32m+    ErrorLog ${APACHE_LOG_DIR}/error.log[0m
+[0;32m[0m[0;32m+    CustomLog ${APACHE_LOG_DIR}/access.log combined[0m
+[0;32m[0m </VirtualHost>
+[0;31m-[0m
+[0;31m[0m[0;31m-# vim: syntax=apache ts=4 sw=4 sts=4 sr noet[0m
+[0;31m[0m
+
+2025-11-29 20:55:07,266 p=5045 u=gladkyi n=ansible INFO| changed: [web1]
+2025-11-29 20:55:08,617 p=5045 u=gladkyi n=ansible INFO| [0;31m--- before: /etc/apache2/sites-available/000-default.conf[0m
+[0;31m[0m[0;32m+++ after: /Users/gladkyi/.ansible/tmp/ansible-local-5045fi_xed7q/tmp6blfk8jv/vhost.conf.j2[0m
+[0;32m[0m[0;36m@@ -1,31 +1,15 @@[0m
+[0;36m[0m <VirtualHost *:80>
+[0;31m-	# The ServerName directive sets the request scheme, hostname and port that[0m
+[0;31m[0m[0;31m-	# the server uses to identify itself. This is used when creating[0m
+[0;31m[0m[0;31m-	# redirection URLs. In the context of virtual hosts, the ServerName[0m
+[0;31m[0m[0;31m-	# specifies what hostname must appear in the request's Host: header to[0m
+[0;31m[0m[0;31m-	# match this virtual host. For the default virtual host (this file) this[0m
+[0;31m[0m[0;31m-	# value is not decisive as it is used as a last resort host regardless.[0m
+[0;31m[0m[0;31m-	# However, you must set it for any further virtual host explicitly.[0m
+[0;31m[0m[0;31m-	#ServerName www.example.com[0m
+[0;31m[0m[0;32m+    ServerAdmin webmaster@example.local[0m
+[0;32m[0m[0;32m+    ServerName example.local[0m
+[0;32m[0m 
+[0;31m-	ServerAdmin webmaster@localhost[0m
+[0;31m[0m[0;31m-	DocumentRoot /var/www/html[0m
+[0;31m[0m[0;32m+    DocumentRoot /var/www/html[0m
+[0;32m[0m 
+[0;31m-	# Available loglevels: trace8, ..., trace1, debug, info, notice, warn,[0m
+[0;31m[0m[0;31m-	# error, crit, alert, emerg.[0m
+[0;31m[0m[0;31m-	# It is also possible to configure the loglevel for particular[0m
+[0;31m[0m[0;31m-	# modules, e.g.[0m
+[0;31m[0m[0;31m-	#LogLevel info ssl:warn[0m
+[0;31m[0m[0;32m+    <Directory /var/www/html>[0m
+[0;32m[0m[0;32m+        Options Indexes FollowSymLinks[0m
+[0;32m[0m[0;32m+        AllowOverride None[0m
+[0;32m[0m[0;32m+        Require all granted[0m
+[0;32m[0m[0;32m+    </Directory>[0m
+[0;32m[0m 
+[0;31m-	ErrorLog ${APACHE_LOG_DIR}/error.log[0m
+[0;31m[0m[0;31m-	CustomLog ${APACHE_LOG_DIR}/access.log combined[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-	# For most configuration files from conf-available/, which are[0m
+[0;31m[0m[0;31m-	# enabled or disabled at a global level, it is possible to[0m
+[0;31m[0m[0;31m-	# include a line for only one particular virtual host. For example the[0m
+[0;31m[0m[0;31m-	# following line enables the CGI configuration for this host only[0m
+[0;31m[0m[0;31m-	# after it has been globally disabled with "a2disconf".[0m
+[0;31m[0m[0;31m-	#Include conf-available/serve-cgi-bin.conf[0m
+[0;31m[0m[0;32m+    ErrorLog ${APACHE_LOG_DIR}/error.log[0m
+[0;32m[0m[0;32m+    CustomLog ${APACHE_LOG_DIR}/access.log combined[0m
+[0;32m[0m </VirtualHost>
+[0;31m-[0m
+[0;31m[0m[0;31m-# vim: syntax=apache ts=4 sw=4 sts=4 sr noet[0m
+[0;31m[0m
+
+2025-11-29 20:55:08,618 p=5045 u=gladkyi n=ansible INFO| changed: [web2]
+2025-11-29 20:55:08,623 p=5045 u=gladkyi n=ansible INFO| TASK [webserver : Deploy custom index page with host IP and greeting] ************************************************************************************************************************************
+2025-11-29 20:55:18,255 p=5045 u=gladkyi n=ansible INFO| [0;31m--- before: /var/www/html/index.html[0m
+[0;31m[0m[0;32m+++ after: /Users/gladkyi/.ansible/tmp/ansible-local-5045fi_xed7q/tmpi339ec8o/index.html.j2[0m
+[0;32m[0m[0;36m@@ -1,363 +1,24 @@[0m
+[0;36m[0m[0;31m-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">[0m
+[0;31m[0m[0;31m-<html xmlns="http://www.w3.org/1999/xhtml">[0m
+[0;31m[0m[0;31m-  <!--[0m
+[0;31m[0m[0;31m-    Modified from the Debian original for Ubuntu[0m
+[0;31m[0m[0;31m-    Last updated: 2022-03-22[0m
+[0;31m[0m[0;31m-    See: https://launchpad.net/bugs/1966004[0m
+[0;31m[0m[0;31m-  -->[0m
+[0;31m[0m[0;31m-  <head>[0m
+[0;31m[0m[0;31m-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />[0m
+[0;31m[0m[0;31m-    <title>Apache2 Ubuntu Default Page: It works</title>[0m
+[0;31m[0m[0;31m-    <style type="text/css" media="screen">[0m
+[0;31m[0m[0;31m-  * {[0m
+[0;31m[0m[0;31m-    margin: 0px 0px 0px 0px;[0m
+[0;31m[0m[0;31m-    padding: 0px 0px 0px 0px;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  body, html {[0m
+[0;31m[0m[0;31m-    padding: 3px 3px 3px 3px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #D8DBE2;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    font-family: Ubuntu, Verdana, sans-serif;[0m
+[0;31m[0m[0;31m-    font-size: 11pt;[0m
+[0;31m[0m[0;31m-    text-align: center;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.main_page {[0m
+[0;31m[0m[0;31m-    position: relative;[0m
+[0;31m[0m[0;31m-    display: table;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    width: 800px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    margin-bottom: 3px;[0m
+[0;31m[0m[0;31m-    margin-left: auto;[0m
+[0;31m[0m[0;31m-    margin-right: auto;[0m
+[0;31m[0m[0;31m-    padding: 0px 0px 0px 0px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    border-width: 2px;[0m
+[0;31m[0m[0;31m-    border-color: #212738;[0m
+[0;31m[0m[0;31m-    border-style: solid;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #FFFFFF;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    text-align: center;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.page_header {[0m
+[0;31m[0m[0;31m-    height: 180px;[0m
+[0;31m[0m[0;31m-    width: 100%;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #F5F6F7;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.page_header span {[0m
+[0;31m[0m[0;31m-    margin: 15px 0px 0px 50px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    font-size: 180%;[0m
+[0;31m[0m[0;31m-    font-weight: bold;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.page_header img {[0m
+[0;31m[0m[0;31m-    margin: 3px 0px 0px 40px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    border: 0px 0px 0px;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.banner {[0m
+[0;31m[0m[0;31m-    padding: 9px 6px 9px 6px;[0m
+[0;31m[0m[0;31m-    background-color: #E9510E;[0m
+[0;31m[0m[0;31m-    color: #FFFFFF;[0m
+[0;31m[0m[0;31m-    font-weight: bold;[0m
+[0;31m[0m[0;31m-    font-size: 112%;[0m
+[0;31m[0m[0;31m-    text-align: center;[0m
+[0;31m[0m[0;31m-    position: absolute;[0m
+[0;31m[0m[0;31m-    left: 40%;[0m
+[0;31m[0m[0;31m-    bottom: 30px;[0m
+[0;31m[0m[0;31m-    width: 20%;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.table_of_contents {[0m
+[0;31m[0m[0;31m-    clear: left;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    min-width: 200px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    margin: 3px 3px 3px 3px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #FFFFFF;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    text-align: left;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item {[0m
+[0;31m[0m[0;31m-    clear: left;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    width: 100%;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    margin: 4px 0px 0px 0px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #FFFFFF;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    color: #000000;[0m
+[0;31m[0m[0;31m-    text-align: left;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item a {[0m
+[0;31m[0m[0;31m-    margin: 6px 0px 0px 6px;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section {[0m
+[0;31m[0m[0;31m-    margin: 3px 3px 3px 3px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #FFFFFF;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    text-align: left;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section_text {[0m
+[0;31m[0m[0;31m-    padding: 4px 8px 4px 8px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    color: #000000;[0m
+[0;31m[0m[0;31m-    font-size: 100%;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section_text pre {[0m
+[0;31m[0m[0;31m-    margin: 8px 0px 8px 0px;[0m
+[0;31m[0m[0;31m-    padding: 8px 8px 8px 8px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    border-width: 1px;[0m
+[0;31m[0m[0;31m-    border-style: dotted;[0m
+[0;31m[0m[0;31m-    border-color: #000000;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #F5F6F7;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    font-style: italic;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section_text p {[0m
+[0;31m[0m[0;31m-    margin-bottom: 6px;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section_text ul, div.content_section_text li {[0m
+[0;31m[0m[0;31m-    padding: 4px 8px 4px 16px;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.section_header {[0m
+[0;31m[0m[0;31m-    padding: 3px 6px 3px 6px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #8E9CB2;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    color: #FFFFFF;[0m
+[0;31m[0m[0;31m-    font-weight: bold;[0m
+[0;31m[0m[0;31m-    font-size: 112%;[0m
+[0;31m[0m[0;31m-    text-align: center;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.section_header_grey {[0m
+[0;31m[0m[0;31m-    background-color: #9F9386;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  .floating_element {[0m
+[0;31m[0m[0;31m-    position: relative;[0m
+[0;31m[0m[0;31m-    float: left;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item a,[0m
+[0;31m[0m[0;31m-  div.content_section_text a {[0m
+[0;31m[0m[0;31m-    text-decoration: none;[0m
+[0;31m[0m[0;31m-    font-weight: bold;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item a:link,[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item a:visited,[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item a:active {[0m
+[0;31m[0m[0;31m-    color: #000000;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item a:hover {[0m
+[0;31m[0m[0;31m-    background-color: #000000;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    color: #FFFFFF;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section_text a:link,[0m
+[0;31m[0m[0;31m-  div.content_section_text a:visited,[0m
+[0;31m[0m[0;31m-   div.content_section_text a:active {[0m
+[0;31m[0m[0;31m-    background-color: #DCDFE6;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    color: #000000;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section_text a:hover {[0m
+[0;31m[0m[0;31m-    background-color: #000000;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    color: #DCDFE6;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.validator {[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-    </style>[0m
+[0;31m[0m[0;31m-  </head>[0m
+[0;31m[0m[0;31m-  <body>[0m
+[0;31m[0m[0;31m-    <div class="main_page">[0m
+[0;31m[0m[0;31m-      <div class="page_header floating_element">[0m
+[0;31m[0m[0;31m-        <img src="icons/ubuntu-logo.png" alt="Ubuntu Logo"[0m
+[0;31m[0m[0;31m-             style="width:184px;height:146px;" class="floating_element" />[0m
+[0;31m[0m[0;31m-        <div>[0m
+[0;31m[0m[0;31m-          <span style="margin-top: 1.5em;" class="floating_element">[0m
+[0;31m[0m[0;31m-            Apache2 Default Page[0m
+[0;31m[0m[0;31m-          </span>[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-        <div class="banner">[0m
+[0;31m[0m[0;31m-          <div id="about"></div>[0m
+[0;31m[0m[0;31m-          It works![0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-      </div>[0m
+[0;31m[0m[0;31m-      <div class="content_section floating_element">[0m
+[0;31m[0m[0;31m-        <div class="content_section_text">[0m
+[0;31m[0m[0;31m-          <p>[0m
+[0;31m[0m[0;31m-                This is the default welcome page used to test the correct [0m
+[0;31m[0m[0;31m-                operation of the Apache2 server after installation on Ubuntu systems.[0m
+[0;31m[0m[0;31m-                It is based on the equivalent page on Debian, from which the Ubuntu Apache[0m
+[0;31m[0m[0;31m-                packaging is derived.[0m
+[0;31m[0m[0;31m-                If you can read this page, it means that the Apache HTTP server installed at[0m
+[0;31m[0m[0;31m-                this site is working properly. You should <b>replace this file</b> (located at[0m
+[0;31m[0m[0;31m-                <tt>/var/www/html/index.html</tt>) before continuing to operate your HTTP server.[0m
+[0;31m[0m[0;31m-          </p>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-          <p>[0m
+[0;31m[0m[0;31m-                If you are a normal user of this web site and don't know what this page is[0m
+[0;31m[0m[0;31m-                about, this probably means that the site is currently unavailable due to[0m
+[0;31m[0m[0;31m-                maintenance.[0m
+[0;31m[0m[0;31m-                If the problem persists, please contact the site's administrator.[0m
+[0;31m[0m[0;31m-          </p>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-        <div class="section_header">[0m
+[0;31m[0m[0;31m-          <div id="changes"></div>[0m
+[0;31m[0m[0;31m-                Configuration Overview[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-        <div class="content_section_text">[0m
+[0;31m[0m[0;31m-          <p>[0m
+[0;31m[0m[0;31m-                Ubuntu's Apache2 default configuration is different from the[0m
+[0;31m[0m[0;31m-                upstream default configuration, and split into several files optimized for[0m
+[0;31m[0m[0;31m-                interaction with Ubuntu tools. The configuration system is[0m
+[0;31m[0m[0;31m-                <b>fully documented in[0m
+[0;31m[0m[0;31m-                /usr/share/doc/apache2/README.Debian.gz</b>. Refer to this for the full[0m
+[0;31m[0m[0;31m-                documentation. Documentation for the web server itself can be[0m
+[0;31m[0m[0;31m-                found by accessing the <a href="/manual">manual</a> if the <tt>apache2-doc</tt>[0m
+[0;31m[0m[0;31m-                package was installed on this server.[0m
+[0;31m[0m[0;31m-          </p>[0m
+[0;31m[0m[0;31m-          <p>[0m
+[0;31m[0m[0;31m-                The configuration layout for an Apache2 web server installation on Ubuntu systems is as follows:[0m
+[0;31m[0m[0;31m-          </p>[0m
+[0;31m[0m[0;31m-          <pre>[0m
+[0;31m[0m[0;31m-/etc/apache2/[0m
+[0;31m[0m[0;31m-|-- apache2.conf[0m
+[0;31m[0m[0;31m-|       `--  ports.conf[0m
+[0;31m[0m[0;31m-|-- mods-enabled[0m
+[0;31m[0m[0;31m-|       |-- *.load[0m
+[0;31m[0m[0;31m-|       `-- *.conf[0m
+[0;31m[0m[0;31m-|-- conf-enabled[0m
+[0;31m[0m[0;31m-|       `-- *.conf[0m
+[0;31m[0m[0;31m-|-- sites-enabled[0m
+[0;31m[0m[0;31m-|       `-- *.conf[0m
+[0;31m[0m[0;31m-          </pre>[0m
+[0;31m[0m[0;31m-          <ul>[0m
+[0;31m[0m[0;31m-                        <li>[0m
+[0;31m[0m[0;31m-                           <tt>apache2.conf</tt> is the main configuration[0m
+[0;31m[0m[0;31m-                           file. It puts the pieces together by including all remaining configuration[0m
+[0;31m[0m[0;31m-                           files when starting up the web server.[0m
+[0;31m[0m[0;31m-                        </li>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-                        <li>[0m
+[0;31m[0m[0;31m-                           <tt>ports.conf</tt> is always included from the[0m
+[0;31m[0m[0;31m-                           main configuration file. It is used to determine the listening ports for[0m
+[0;31m[0m[0;31m-                           incoming connections, and this file can be customized anytime.[0m
+[0;31m[0m[0;31m-                        </li>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-                        <li>[0m
+[0;31m[0m[0;31m-                           Configuration files in the <tt>mods-enabled/</tt>,[0m
+[0;31m[0m[0;31m-                           <tt>conf-enabled/</tt> and <tt>sites-enabled/</tt> directories contain[0m
+[0;31m[0m[0;31m-                           particular configuration snippets which manage modules, global configuration[0m
+[0;31m[0m[0;31m-                           fragments, or virtual host configurations, respectively.[0m
+[0;31m[0m[0;31m-                        </li>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-                        <li>[0m
+[0;31m[0m[0;31m-                           They are activated by symlinking available[0m
+[0;31m[0m[0;31m-                           configuration files from their respective[0m
+[0;31m[0m[0;31m-                           *-available/ counterparts. These should be managed[0m
+[0;31m[0m[0;31m-                           by using our helpers[0m
+[0;31m[0m[0;31m-                           <tt>[0m
+[0;31m[0m[0;31m-                                a2enmod,[0m
+[0;31m[0m[0;31m-                                a2dismod,[0m
+[0;31m[0m[0;31m-                           </tt>[0m
+[0;31m[0m[0;31m-                           <tt>[0m
+[0;31m[0m[0;31m-                                a2ensite,[0m
+[0;31m[0m[0;31m-                                a2dissite,[0m
+[0;31m[0m[0;31m-                            </tt>[0m
+[0;31m[0m[0;31m-                                and[0m
+[0;31m[0m[0;31m-                           <tt>[0m
+[0;31m[0m[0;31m-                                a2enconf,[0m
+[0;31m[0m[0;31m-                                a2disconf[0m
+[0;31m[0m[0;31m-                           </tt>. See their respective man pages for detailed information.[0m
+[0;31m[0m[0;31m-                        </li>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-                        <li>[0m
+[0;31m[0m[0;31m-                           The binary is called apache2 and is managed using systemd, so to[0m
+[0;31m[0m[0;31m-                           start/stop the service use <tt>systemctl start apache2</tt> and[0m
+[0;31m[0m[0;31m-                           <tt>systemctl stop apache2</tt>, and use <tt>systemctl status apache2</tt>[0m
+[0;31m[0m[0;31m-                           and <tt>journalctl -u apache2</tt> to check status.  <tt>system</tt>[0m
+[0;31m[0m[0;31m-                           and <tt>apache2ctl</tt> can also be used for service management if[0m
+[0;31m[0m[0;31m-                           desired.[0m
+[0;31m[0m[0;31m-                           <b>Calling <tt>/usr/bin/apache2</tt> directly will not work</b> with the[0m
+[0;31m[0m[0;31m-                           default configuration.[0m
+[0;31m[0m[0;31m-                        </li>[0m
+[0;31m[0m[0;31m-          </ul>[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-        <div class="section_header">[0m
+[0;31m[0m[0;31m-            <div id="docroot"></div>[0m
+[0;31m[0m[0;31m-                Document Roots[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-        <div class="content_section_text">[0m
+[0;31m[0m[0;31m-            <p>[0m
+[0;31m[0m[0;31m-                By default, Ubuntu does not allow access through the web browser to[0m
+[0;31m[0m[0;31m-                <em>any</em> file outside of those located in <tt>/var/www</tt>,[0m
+[0;31m[0m[0;31m-                <a href="http://httpd.apache.org/docs/2.4/mod/mod_userdir.html" rel="nofollow">public_html</a>[0m
+[0;31m[0m[0;31m-                directories (when enabled) and <tt>/usr/share</tt> (for web[0m
+[0;31m[0m[0;31m-                applications). If your site is using a web document root[0m
+[0;31m[0m[0;31m-                located elsewhere (such as in <tt>/srv</tt>) you may need to whitelist your[0m
+[0;31m[0m[0;31m-                document root directory in <tt>/etc/apache2/apache2.conf</tt>.[0m
+[0;31m[0m[0;31m-            </p>[0m
+[0;31m[0m[0;31m-            <p>[0m
+[0;31m[0m[0;31m-                The default Ubuntu document root is <tt>/var/www/html</tt>. You[0m
+[0;31m[0m[0;31m-                can make your own virtual hosts under /var/www.[0m
+[0;31m[0m[0;31m-            </p>[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-        <div class="section_header">[0m
+[0;31m[0m[0;31m-          <div id="bugs"></div>[0m
+[0;31m[0m[0;31m-                Reporting Problems[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-        <div class="content_section_text">[0m
+[0;31m[0m[0;31m-          <p>[0m
+[0;31m[0m[0;31m-                Please use the <tt>ubuntu-bug</tt> tool to report bugs in the[0m
+[0;31m[0m[0;31m-                Apache2 package with Ubuntu. However, check <a[0m
+[0;31m[0m[0;31m-                href="https://bugs.launchpad.net/ubuntu/+source/apache2"[0m
+[0;31m[0m[0;31m-                rel="nofollow">existing bug reports</a> before reporting a new bug.[0m
+[0;31m[0m[0;31m-          </p>[0m
+[0;31m[0m[0;31m-          <p>[0m
+[0;31m[0m[0;31m-                Please report bugs specific to modules (such as PHP and others)[0m
+[0;31m[0m[0;31m-                to their respective packages, not to the web server itself.[0m
+[0;31m[0m[0;31m-          </p>[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-      </div>[0m
+[0;31m[0m[0;31m-    </div>[0m
+[0;31m[0m[0;31m-    <div class="validator">[0m
+[0;31m[0m[0;31m-    </div>[0m
+[0;31m[0m[0;31m-  </body>[0m
+[0;31m[0m[0;32m+<!DOCTYPE html>[0m
+[0;32m[0m[0;32m+<html lang="en">[0m
+[0;32m[0m[0;32m+<head>[0m
+[0;32m[0m[0;32m+  <meta charset="UTF-8" />[0m
+[0;32m[0m[0;32m+  <title>Custom Web Page</title>[0m
+[0;32m[0m[0;32m+  <style>[0m
+[0;32m[0m[0;32m+    body { font-family: Arial, sans-serif; margin: 2rem; background: #f8f9fa; color: #222; }[0m
+[0;32m[0m[0;32m+    header { margin-bottom: 1.5rem; }[0m
+[0;32m[0m[0;32m+    h1 { margin: 0 0 0.5rem 0; }[0m
+[0;32m[0m[0;32m+    .card { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }[0m
+[0;32m[0m[0;32m+    .muted { color: #666; }[0m
+[0;32m[0m[0;32m+  </style>[0m
+[0;32m[0m[0;32m+</head>[0m
+[0;32m[0m[0;32m+<body>[0m
+[0;32m[0m[0;32m+  <header>[0m
+[0;32m[0m[0;32m+    <h1>Hello ip-172-31-21-85.eu-west-3.compute.internal!</h1>[0m
+[0;32m[0m[0;32m+    <p class="muted">Welcome to your web server deployed by Ansible.</p>[0m
+[0;32m[0m[0;32m+  </header>[0m
+[0;32m[0m[0;32m+  <div class="card">[0m
+[0;32m[0m[0;32m+    <p><strong>Host:</strong> web1</p>[0m
+[0;32m[0m[0;32m+    <p><strong>IP:</strong> 172.31.21.85</p>[0m
+[0;32m[0m[0;32m+  </div>[0m
+[0;32m[0m[0;32m+</body>[0m
+[0;32m[0m </html>
+
+
+2025-11-29 20:55:18,256 p=5045 u=gladkyi n=ansible INFO| changed: [web1]
+2025-11-29 20:55:18,279 p=5045 u=gladkyi n=ansible INFO| [0;31m--- before: /var/www/html/index.html[0m
+[0;31m[0m[0;32m+++ after: /Users/gladkyi/.ansible/tmp/ansible-local-5045fi_xed7q/tmpmvs675sl/index.html.j2[0m
+[0;32m[0m[0;36m@@ -1,363 +1,24 @@[0m
+[0;36m[0m[0;31m-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">[0m
+[0;31m[0m[0;31m-<html xmlns="http://www.w3.org/1999/xhtml">[0m
+[0;31m[0m[0;31m-  <!--[0m
+[0;31m[0m[0;31m-    Modified from the Debian original for Ubuntu[0m
+[0;31m[0m[0;31m-    Last updated: 2022-03-22[0m
+[0;31m[0m[0;31m-    See: https://launchpad.net/bugs/1966004[0m
+[0;31m[0m[0;31m-  -->[0m
+[0;31m[0m[0;31m-  <head>[0m
+[0;31m[0m[0;31m-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />[0m
+[0;31m[0m[0;31m-    <title>Apache2 Ubuntu Default Page: It works</title>[0m
+[0;31m[0m[0;31m-    <style type="text/css" media="screen">[0m
+[0;31m[0m[0;31m-  * {[0m
+[0;31m[0m[0;31m-    margin: 0px 0px 0px 0px;[0m
+[0;31m[0m[0;31m-    padding: 0px 0px 0px 0px;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  body, html {[0m
+[0;31m[0m[0;31m-    padding: 3px 3px 3px 3px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #D8DBE2;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    font-family: Ubuntu, Verdana, sans-serif;[0m
+[0;31m[0m[0;31m-    font-size: 11pt;[0m
+[0;31m[0m[0;31m-    text-align: center;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.main_page {[0m
+[0;31m[0m[0;31m-    position: relative;[0m
+[0;31m[0m[0;31m-    display: table;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    width: 800px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    margin-bottom: 3px;[0m
+[0;31m[0m[0;31m-    margin-left: auto;[0m
+[0;31m[0m[0;31m-    margin-right: auto;[0m
+[0;31m[0m[0;31m-    padding: 0px 0px 0px 0px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    border-width: 2px;[0m
+[0;31m[0m[0;31m-    border-color: #212738;[0m
+[0;31m[0m[0;31m-    border-style: solid;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #FFFFFF;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    text-align: center;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.page_header {[0m
+[0;31m[0m[0;31m-    height: 180px;[0m
+[0;31m[0m[0;31m-    width: 100%;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #F5F6F7;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.page_header span {[0m
+[0;31m[0m[0;31m-    margin: 15px 0px 0px 50px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    font-size: 180%;[0m
+[0;31m[0m[0;31m-    font-weight: bold;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.page_header img {[0m
+[0;31m[0m[0;31m-    margin: 3px 0px 0px 40px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    border: 0px 0px 0px;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.banner {[0m
+[0;31m[0m[0;31m-    padding: 9px 6px 9px 6px;[0m
+[0;31m[0m[0;31m-    background-color: #E9510E;[0m
+[0;31m[0m[0;31m-    color: #FFFFFF;[0m
+[0;31m[0m[0;31m-    font-weight: bold;[0m
+[0;31m[0m[0;31m-    font-size: 112%;[0m
+[0;31m[0m[0;31m-    text-align: center;[0m
+[0;31m[0m[0;31m-    position: absolute;[0m
+[0;31m[0m[0;31m-    left: 40%;[0m
+[0;31m[0m[0;31m-    bottom: 30px;[0m
+[0;31m[0m[0;31m-    width: 20%;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.table_of_contents {[0m
+[0;31m[0m[0;31m-    clear: left;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    min-width: 200px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    margin: 3px 3px 3px 3px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #FFFFFF;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    text-align: left;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item {[0m
+[0;31m[0m[0;31m-    clear: left;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    width: 100%;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    margin: 4px 0px 0px 0px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #FFFFFF;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    color: #000000;[0m
+[0;31m[0m[0;31m-    text-align: left;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item a {[0m
+[0;31m[0m[0;31m-    margin: 6px 0px 0px 6px;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section {[0m
+[0;31m[0m[0;31m-    margin: 3px 3px 3px 3px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #FFFFFF;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    text-align: left;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section_text {[0m
+[0;31m[0m[0;31m-    padding: 4px 8px 4px 8px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    color: #000000;[0m
+[0;31m[0m[0;31m-    font-size: 100%;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section_text pre {[0m
+[0;31m[0m[0;31m-    margin: 8px 0px 8px 0px;[0m
+[0;31m[0m[0;31m-    padding: 8px 8px 8px 8px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    border-width: 1px;[0m
+[0;31m[0m[0;31m-    border-style: dotted;[0m
+[0;31m[0m[0;31m-    border-color: #000000;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #F5F6F7;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    font-style: italic;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section_text p {[0m
+[0;31m[0m[0;31m-    margin-bottom: 6px;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section_text ul, div.content_section_text li {[0m
+[0;31m[0m[0;31m-    padding: 4px 8px 4px 16px;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.section_header {[0m
+[0;31m[0m[0;31m-    padding: 3px 6px 3px 6px;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    background-color: #8E9CB2;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    color: #FFFFFF;[0m
+[0;31m[0m[0;31m-    font-weight: bold;[0m
+[0;31m[0m[0;31m-    font-size: 112%;[0m
+[0;31m[0m[0;31m-    text-align: center;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.section_header_grey {[0m
+[0;31m[0m[0;31m-    background-color: #9F9386;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  .floating_element {[0m
+[0;31m[0m[0;31m-    position: relative;[0m
+[0;31m[0m[0;31m-    float: left;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item a,[0m
+[0;31m[0m[0;31m-  div.content_section_text a {[0m
+[0;31m[0m[0;31m-    text-decoration: none;[0m
+[0;31m[0m[0;31m-    font-weight: bold;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item a:link,[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item a:visited,[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item a:active {[0m
+[0;31m[0m[0;31m-    color: #000000;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.table_of_contents_item a:hover {[0m
+[0;31m[0m[0;31m-    background-color: #000000;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    color: #FFFFFF;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section_text a:link,[0m
+[0;31m[0m[0;31m-  div.content_section_text a:visited,[0m
+[0;31m[0m[0;31m-   div.content_section_text a:active {[0m
+[0;31m[0m[0;31m-    background-color: #DCDFE6;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    color: #000000;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.content_section_text a:hover {[0m
+[0;31m[0m[0;31m-    background-color: #000000;[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-    color: #DCDFE6;[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-  div.validator {[0m
+[0;31m[0m[0;31m-  }[0m
+[0;31m[0m[0;31m-    </style>[0m
+[0;31m[0m[0;31m-  </head>[0m
+[0;31m[0m[0;31m-  <body>[0m
+[0;31m[0m[0;31m-    <div class="main_page">[0m
+[0;31m[0m[0;31m-      <div class="page_header floating_element">[0m
+[0;31m[0m[0;31m-        <img src="icons/ubuntu-logo.png" alt="Ubuntu Logo"[0m
+[0;31m[0m[0;31m-             style="width:184px;height:146px;" class="floating_element" />[0m
+[0;31m[0m[0;31m-        <div>[0m
+[0;31m[0m[0;31m-          <span style="margin-top: 1.5em;" class="floating_element">[0m
+[0;31m[0m[0;31m-            Apache2 Default Page[0m
+[0;31m[0m[0;31m-          </span>[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-        <div class="banner">[0m
+[0;31m[0m[0;31m-          <div id="about"></div>[0m
+[0;31m[0m[0;31m-          It works![0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-      </div>[0m
+[0;31m[0m[0;31m-      <div class="content_section floating_element">[0m
+[0;31m[0m[0;31m-        <div class="content_section_text">[0m
+[0;31m[0m[0;31m-          <p>[0m
+[0;31m[0m[0;31m-                This is the default welcome page used to test the correct [0m
+[0;31m[0m[0;31m-                operation of the Apache2 server after installation on Ubuntu systems.[0m
+[0;31m[0m[0;31m-                It is based on the equivalent page on Debian, from which the Ubuntu Apache[0m
+[0;31m[0m[0;31m-                packaging is derived.[0m
+[0;31m[0m[0;31m-                If you can read this page, it means that the Apache HTTP server installed at[0m
+[0;31m[0m[0;31m-                this site is working properly. You should <b>replace this file</b> (located at[0m
+[0;31m[0m[0;31m-                <tt>/var/www/html/index.html</tt>) before continuing to operate your HTTP server.[0m
+[0;31m[0m[0;31m-          </p>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-          <p>[0m
+[0;31m[0m[0;31m-                If you are a normal user of this web site and don't know what this page is[0m
+[0;31m[0m[0;31m-                about, this probably means that the site is currently unavailable due to[0m
+[0;31m[0m[0;31m-                maintenance.[0m
+[0;31m[0m[0;31m-                If the problem persists, please contact the site's administrator.[0m
+[0;31m[0m[0;31m-          </p>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-        <div class="section_header">[0m
+[0;31m[0m[0;31m-          <div id="changes"></div>[0m
+[0;31m[0m[0;31m-                Configuration Overview[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-        <div class="content_section_text">[0m
+[0;31m[0m[0;31m-          <p>[0m
+[0;31m[0m[0;31m-                Ubuntu's Apache2 default configuration is different from the[0m
+[0;31m[0m[0;31m-                upstream default configuration, and split into several files optimized for[0m
+[0;31m[0m[0;31m-                interaction with Ubuntu tools. The configuration system is[0m
+[0;31m[0m[0;31m-                <b>fully documented in[0m
+[0;31m[0m[0;31m-                /usr/share/doc/apache2/README.Debian.gz</b>. Refer to this for the full[0m
+[0;31m[0m[0;31m-                documentation. Documentation for the web server itself can be[0m
+[0;31m[0m[0;31m-                found by accessing the <a href="/manual">manual</a> if the <tt>apache2-doc</tt>[0m
+[0;31m[0m[0;31m-                package was installed on this server.[0m
+[0;31m[0m[0;31m-          </p>[0m
+[0;31m[0m[0;31m-          <p>[0m
+[0;31m[0m[0;31m-                The configuration layout for an Apache2 web server installation on Ubuntu systems is as follows:[0m
+[0;31m[0m[0;31m-          </p>[0m
+[0;31m[0m[0;31m-          <pre>[0m
+[0;31m[0m[0;31m-/etc/apache2/[0m
+[0;31m[0m[0;31m-|-- apache2.conf[0m
+[0;31m[0m[0;31m-|       `--  ports.conf[0m
+[0;31m[0m[0;31m-|-- mods-enabled[0m
+[0;31m[0m[0;31m-|       |-- *.load[0m
+[0;31m[0m[0;31m-|       `-- *.conf[0m
+[0;31m[0m[0;31m-|-- conf-enabled[0m
+[0;31m[0m[0;31m-|       `-- *.conf[0m
+[0;31m[0m[0;31m-|-- sites-enabled[0m
+[0;31m[0m[0;31m-|       `-- *.conf[0m
+[0;31m[0m[0;31m-          </pre>[0m
+[0;31m[0m[0;31m-          <ul>[0m
+[0;31m[0m[0;31m-                        <li>[0m
+[0;31m[0m[0;31m-                           <tt>apache2.conf</tt> is the main configuration[0m
+[0;31m[0m[0;31m-                           file. It puts the pieces together by including all remaining configuration[0m
+[0;31m[0m[0;31m-                           files when starting up the web server.[0m
+[0;31m[0m[0;31m-                        </li>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-                        <li>[0m
+[0;31m[0m[0;31m-                           <tt>ports.conf</tt> is always included from the[0m
+[0;31m[0m[0;31m-                           main configuration file. It is used to determine the listening ports for[0m
+[0;31m[0m[0;31m-                           incoming connections, and this file can be customized anytime.[0m
+[0;31m[0m[0;31m-                        </li>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-                        <li>[0m
+[0;31m[0m[0;31m-                           Configuration files in the <tt>mods-enabled/</tt>,[0m
+[0;31m[0m[0;31m-                           <tt>conf-enabled/</tt> and <tt>sites-enabled/</tt> directories contain[0m
+[0;31m[0m[0;31m-                           particular configuration snippets which manage modules, global configuration[0m
+[0;31m[0m[0;31m-                           fragments, or virtual host configurations, respectively.[0m
+[0;31m[0m[0;31m-                        </li>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-                        <li>[0m
+[0;31m[0m[0;31m-                           They are activated by symlinking available[0m
+[0;31m[0m[0;31m-                           configuration files from their respective[0m
+[0;31m[0m[0;31m-                           *-available/ counterparts. These should be managed[0m
+[0;31m[0m[0;31m-                           by using our helpers[0m
+[0;31m[0m[0;31m-                           <tt>[0m
+[0;31m[0m[0;31m-                                a2enmod,[0m
+[0;31m[0m[0;31m-                                a2dismod,[0m
+[0;31m[0m[0;31m-                           </tt>[0m
+[0;31m[0m[0;31m-                           <tt>[0m
+[0;31m[0m[0;31m-                                a2ensite,[0m
+[0;31m[0m[0;31m-                                a2dissite,[0m
+[0;31m[0m[0;31m-                            </tt>[0m
+[0;31m[0m[0;31m-                                and[0m
+[0;31m[0m[0;31m-                           <tt>[0m
+[0;31m[0m[0;31m-                                a2enconf,[0m
+[0;31m[0m[0;31m-                                a2disconf[0m
+[0;31m[0m[0;31m-                           </tt>. See their respective man pages for detailed information.[0m
+[0;31m[0m[0;31m-                        </li>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-                        <li>[0m
+[0;31m[0m[0;31m-                           The binary is called apache2 and is managed using systemd, so to[0m
+[0;31m[0m[0;31m-                           start/stop the service use <tt>systemctl start apache2</tt> and[0m
+[0;31m[0m[0;31m-                           <tt>systemctl stop apache2</tt>, and use <tt>systemctl status apache2</tt>[0m
+[0;31m[0m[0;31m-                           and <tt>journalctl -u apache2</tt> to check status.  <tt>system</tt>[0m
+[0;31m[0m[0;31m-                           and <tt>apache2ctl</tt> can also be used for service management if[0m
+[0;31m[0m[0;31m-                           desired.[0m
+[0;31m[0m[0;31m-                           <b>Calling <tt>/usr/bin/apache2</tt> directly will not work</b> with the[0m
+[0;31m[0m[0;31m-                           default configuration.[0m
+[0;31m[0m[0;31m-                        </li>[0m
+[0;31m[0m[0;31m-          </ul>[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-        <div class="section_header">[0m
+[0;31m[0m[0;31m-            <div id="docroot"></div>[0m
+[0;31m[0m[0;31m-                Document Roots[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-        <div class="content_section_text">[0m
+[0;31m[0m[0;31m-            <p>[0m
+[0;31m[0m[0;31m-                By default, Ubuntu does not allow access through the web browser to[0m
+[0;31m[0m[0;31m-                <em>any</em> file outside of those located in <tt>/var/www</tt>,[0m
+[0;31m[0m[0;31m-                <a href="http://httpd.apache.org/docs/2.4/mod/mod_userdir.html" rel="nofollow">public_html</a>[0m
+[0;31m[0m[0;31m-                directories (when enabled) and <tt>/usr/share</tt> (for web[0m
+[0;31m[0m[0;31m-                applications). If your site is using a web document root[0m
+[0;31m[0m[0;31m-                located elsewhere (such as in <tt>/srv</tt>) you may need to whitelist your[0m
+[0;31m[0m[0;31m-                document root directory in <tt>/etc/apache2/apache2.conf</tt>.[0m
+[0;31m[0m[0;31m-            </p>[0m
+[0;31m[0m[0;31m-            <p>[0m
+[0;31m[0m[0;31m-                The default Ubuntu document root is <tt>/var/www/html</tt>. You[0m
+[0;31m[0m[0;31m-                can make your own virtual hosts under /var/www.[0m
+[0;31m[0m[0;31m-            </p>[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-        <div class="section_header">[0m
+[0;31m[0m[0;31m-          <div id="bugs"></div>[0m
+[0;31m[0m[0;31m-                Reporting Problems[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-        <div class="content_section_text">[0m
+[0;31m[0m[0;31m-          <p>[0m
+[0;31m[0m[0;31m-                Please use the <tt>ubuntu-bug</tt> tool to report bugs in the[0m
+[0;31m[0m[0;31m-                Apache2 package with Ubuntu. However, check <a[0m
+[0;31m[0m[0;31m-                href="https://bugs.launchpad.net/ubuntu/+source/apache2"[0m
+[0;31m[0m[0;31m-                rel="nofollow">existing bug reports</a> before reporting a new bug.[0m
+[0;31m[0m[0;31m-          </p>[0m
+[0;31m[0m[0;31m-          <p>[0m
+[0;31m[0m[0;31m-                Please report bugs specific to modules (such as PHP and others)[0m
+[0;31m[0m[0;31m-                to their respective packages, not to the web server itself.[0m
+[0;31m[0m[0;31m-          </p>[0m
+[0;31m[0m[0;31m-        </div>[0m
+[0;31m[0m[0;31m-[0m
+[0;31m[0m[0;31m-      </div>[0m
+[0;31m[0m[0;31m-    </div>[0m
+[0;31m[0m[0;31m-    <div class="validator">[0m
+[0;31m[0m[0;31m-    </div>[0m
+[0;31m[0m[0;31m-  </body>[0m
+[0;31m[0m[0;32m+<!DOCTYPE html>[0m
+[0;32m[0m[0;32m+<html lang="en">[0m
+[0;32m[0m[0;32m+<head>[0m
+[0;32m[0m[0;32m+  <meta charset="UTF-8" />[0m
+[0;32m[0m[0;32m+  <title>Custom Web Page</title>[0m
+[0;32m[0m[0;32m+  <style>[0m
+[0;32m[0m[0;32m+    body { font-family: Arial, sans-serif; margin: 2rem; background: #f8f9fa; color: #222; }[0m
+[0;32m[0m[0;32m+    header { margin-bottom: 1.5rem; }[0m
+[0;32m[0m[0;32m+    h1 { margin: 0 0 0.5rem 0; }[0m
+[0;32m[0m[0;32m+    .card { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }[0m
+[0;32m[0m[0;32m+    .muted { color: #666; }[0m
+[0;32m[0m[0;32m+  </style>[0m
+[0;32m[0m[0;32m+</head>[0m
+[0;32m[0m[0;32m+<body>[0m
+[0;32m[0m[0;32m+  <header>[0m
+[0;32m[0m[0;32m+    <h1>Hello ip-172-31-17-42.eu-west-3.compute.internal!</h1>[0m
+[0;32m[0m[0;32m+    <p class="muted">Welcome to your web server deployed by Ansible.</p>[0m
+[0;32m[0m[0;32m+  </header>[0m
+[0;32m[0m[0;32m+  <div class="card">[0m
+[0;32m[0m[0;32m+    <p><strong>Host:</strong> web2</p>[0m
+[0;32m[0m[0;32m+    <p><strong>IP:</strong> 172.31.17.42</p>[0m
+[0;32m[0m[0;32m+  </div>[0m
+[0;32m[0m[0;32m+</body>[0m
+[0;32m[0m </html>
+
+
+2025-11-29 20:55:18,280 p=5045 u=gladkyi n=ansible INFO| changed: [web2]
+2025-11-29 20:55:18,290 p=5045 u=gladkyi n=ansible INFO| RUNNING HANDLER [webserver : restart webserver] **********************************************************************************************************************************************************
+2025-11-29 20:55:21,939 p=5045 u=gladkyi n=ansible INFO| changed: [web1]
+2025-11-29 20:55:21,940 p=5045 u=gladkyi n=ansible INFO| changed: [web2]
+2025-11-29 20:55:21,941 p=5045 u=gladkyi n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-11-29 20:55:21,941 p=5045 u=gladkyi n=ansible INFO| web1                       : ok=6    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-29 20:55:21,941 p=5045 u=gladkyi n=ansible INFO| web2                       : ok=6    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-29 21:03:50,841 p=5374 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 21:03:50,844 p=5374 u=gladkyi n=ansible INFO| web1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "name": "apache2",
+    "status": {
+        "ActiveEnterTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "ActiveEnterTimestampMonotonic": "7000306164",
+        "ActiveExitTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "ActiveExitTimestampMonotonic": "7000221967",
+        "ActiveState": "active",
+        "After": "system.slice network.target systemd-journald.socket systemd-tmpfiles-setup.service remote-fs.target tmp.mount nss-lookup.target -.mount basic.target sysinit.target",
+        "AllowIsolate": "no",
+        "AssertResult": "yes",
+        "AssertTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "AssertTimestampMonotonic": "7000278315",
+        "Before": "multi-user.target shutdown.target apache-htcacheclean.service",
+        "BlockIOAccounting": "no",
+        "BlockIOWeight": "[not set]",
+        "CPUAccounting": "yes",
+        "CPUAffinityFromNUMA": "no",
+        "CPUQuotaPerSecUSec": "infinity",
+        "CPUQuotaPeriodUSec": "infinity",
+        "CPUSchedulingPolicy": "0",
+        "CPUSchedulingPriority": "0",
+        "CPUSchedulingResetOnFork": "no",
+        "CPUShares": "[not set]",
+        "CPUUsageNSec": "59019000",
+        "CPUWeight": "[not set]",
+        "CacheDirectoryMode": "0755",
+        "CanFreeze": "yes",
+        "CanIsolate": "no",
+        "CanReload": "yes",
+        "CanStart": "yes",
+        "CanStop": "yes",
+        "CapabilityBoundingSet": "cap_chown cap_dac_override cap_dac_read_search cap_fowner cap_fsetid cap_kill cap_setgid cap_setuid cap_setpcap cap_linux_immutable cap_net_bind_service cap_net_broadcast cap_net_admin cap_net_raw cap_ipc_lock cap_ipc_owner cap_sys_module cap_sys_rawio cap_sys_chroot cap_sys_ptrace cap_sys_pacct cap_sys_admin cap_sys_boot cap_sys_nice cap_sys_resource cap_sys_time cap_sys_tty_config cap_mknod cap_lease cap_audit_write cap_audit_control cap_setfcap cap_mac_override cap_mac_admin cap_syslog cap_wake_alarm cap_block_suspend cap_audit_read cap_perfmon cap_bpf cap_checkpoint_restore",
+        "CleanResult": "success",
+        "CollectMode": "inactive",
+        "ConditionResult": "yes",
+        "ConditionTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "ConditionTimestampMonotonic": "7000278312",
+        "ConfigurationDirectoryMode": "0755",
+        "Conflicts": "shutdown.target",
+        "ControlGroup": "/system.slice/apache2.service",
+        "ControlPID": "0",
+        "CoredumpFilter": "0x33",
+        "DefaultDependencies": "yes",
+        "DefaultMemoryLow": "0",
+        "DefaultMemoryMin": "0",
+        "Delegate": "no",
+        "Description": "The Apache HTTP Server",
+        "DevicePolicy": "auto",
+        "Documentation": "https://httpd.apache.org/docs/2.4/",
+        "DynamicUser": "no",
+        "EffectiveCPUs": "0-1",
+        "EffectiveMemoryNodes": "0",
+        "Environment": "APACHE_STARTED_BY_SYSTEMD=true",
+        "ExecMainCode": "0",
+        "ExecMainExitTimestamp": "n/a",
+        "ExecMainExitTimestampMonotonic": "0",
+        "ExecMainPID": "7469",
+        "ExecMainStartTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "ExecMainStartTimestampMonotonic": "7000306137",
+        "ExecMainStatus": "0",
+        "ExecReload": "{ path=/usr/sbin/apachectl ; argv[]=/usr/sbin/apachectl graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }",
+        "ExecReloadEx": "{ path=/usr/sbin/apachectl ; argv[]=/usr/sbin/apachectl graceful ; flags= ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }",
+        "ExecStart": "{ path=/usr/sbin/apachectl ; argv[]=/usr/sbin/apachectl start ; ignore_errors=no ; start_time=[Sat 2025-11-29 19:55:21 UTC] ; stop_time=[Sat 2025-11-29 19:55:21 UTC] ; pid=7465 ; code=exited ; status=0 }",
+        "ExecStartEx": "{ path=/usr/sbin/apachectl ; argv[]=/usr/sbin/apachectl start ; flags= ; start_time=[Sat 2025-11-29 19:55:21 UTC] ; stop_time=[Sat 2025-11-29 19:55:21 UTC] ; pid=7465 ; code=exited ; status=0 }",
+        "ExecStop": "{ path=/usr/sbin/apachectl ; argv[]=/usr/sbin/apachectl graceful-stop ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }",
+        "ExecStopEx": "{ path=/usr/sbin/apachectl ; argv[]=/usr/sbin/apachectl graceful-stop ; flags= ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }",
+        "FailureAction": "none",
+        "FileDescriptorStoreMax": "0",
+        "FinalKillSignal": "9",
+        "FragmentPath": "/lib/systemd/system/apache2.service",
+        "FreezerState": "running",
+        "GID": "[not set]",
+        "GuessMainPID": "yes",
+        "IOAccounting": "no",
+        "IOReadBytes": "18446744073709551615",
+        "IOReadOperations": "18446744073709551615",
+        "IOSchedulingClass": "2",
+        "IOSchedulingPriority": "4",
+        "IOWeight": "[not set]",
+        "IOWriteBytes": "18446744073709551615",
+        "IOWriteOperations": "18446744073709551615",
+        "IPAccounting": "no",
+        "IPEgressBytes": "[no data]",
+        "IPEgressPackets": "[no data]",
+        "IPIngressBytes": "[no data]",
+        "IPIngressPackets": "[no data]",
+        "Id": "apache2.service",
+        "IgnoreOnIsolate": "no",
+        "IgnoreSIGPIPE": "yes",
+        "InactiveEnterTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "InactiveEnterTimestampMonotonic": "7000277342",
+        "InactiveExitTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "InactiveExitTimestampMonotonic": "7000283724",
+        "InvocationID": "dacd92825a0a4ca6ac3a0a583c759d2d",
+        "JobRunningTimeoutUSec": "infinity",
+        "JobTimeoutAction": "none",
+        "JobTimeoutUSec": "infinity",
+        "KeyringMode": "private",
+        "KillMode": "mixed",
+        "KillSignal": "15",
+        "LimitAS": "infinity",
+        "LimitASSoft": "infinity",
+        "LimitCORE": "infinity",
+        "LimitCORESoft": "0",
+        "LimitCPU": "infinity",
+        "LimitCPUSoft": "infinity",
+        "LimitDATA": "infinity",
+        "LimitDATASoft": "infinity",
+        "LimitFSIZE": "infinity",
+        "LimitFSIZESoft": "infinity",
+        "LimitLOCKS": "infinity",
+        "LimitLOCKSSoft": "infinity",
+        "LimitMEMLOCK": "8388608",
+        "LimitMEMLOCKSoft": "8388608",
+        "LimitMSGQUEUE": "819200",
+        "LimitMSGQUEUESoft": "819200",
+        "LimitNICE": "0",
+        "LimitNICESoft": "0",
+        "LimitNOFILE": "524288",
+        "LimitNOFILESoft": "1024",
+        "LimitNPROC": "3577",
+        "LimitNPROCSoft": "3577",
+        "LimitRSS": "infinity",
+        "LimitRSSSoft": "infinity",
+        "LimitRTPRIO": "0",
+        "LimitRTPRIOSoft": "0",
+        "LimitRTTIME": "infinity",
+        "LimitRTTIMESoft": "infinity",
+        "LimitSIGPENDING": "3577",
+        "LimitSIGPENDINGSoft": "3577",
+        "LimitSTACK": "infinity",
+        "LimitSTACKSoft": "8388608",
+        "LoadState": "loaded",
+        "LockPersonality": "no",
+        "LogLevelMax": "-1",
+        "LogRateLimitBurst": "0",
+        "LogRateLimitIntervalUSec": "0",
+        "LogsDirectoryMode": "0755",
+        "MainPID": "7469",
+        "ManagedOOMMemoryPressure": "auto",
+        "ManagedOOMMemoryPressureLimit": "0",
+        "ManagedOOMPreference": "none",
+        "ManagedOOMSwap": "auto",
+        "MemoryAccounting": "yes",
+        "MemoryAvailable": "infinity",
+        "MemoryCurrent": "5492736",
+        "MemoryDenyWriteExecute": "no",
+        "MemoryHigh": "infinity",
+        "MemoryLimit": "infinity",
+        "MemoryLow": "0",
+        "MemoryMax": "infinity",
+        "MemoryMin": "0",
+        "MemorySwapMax": "infinity",
+        "MountAPIVFS": "no",
+        "NFileDescriptorStore": "0",
+        "NRestarts": "0",
+        "NUMAPolicy": "n/a",
+        "Names": "apache2.service",
+        "NeedDaemonReload": "no",
+        "Nice": "0",
+        "NoNewPrivileges": "no",
+        "NonBlocking": "no",
+        "NotifyAccess": "none",
+        "OOMPolicy": "stop",
+        "OOMScoreAdjust": "0",
+        "OnFailureJobMode": "replace",
+        "OnSuccessJobMode": "fail",
+        "Perpetual": "no",
+        "PrivateDevices": "no",
+        "PrivateIPC": "no",
+        "PrivateMounts": "no",
+        "PrivateNetwork": "no",
+        "PrivateTmp": "yes",
+        "PrivateUsers": "no",
+        "ProcSubset": "all",
+        "ProtectClock": "no",
+        "ProtectControlGroups": "no",
+        "ProtectHome": "no",
+        "ProtectHostname": "no",
+        "ProtectKernelLogs": "no",
+        "ProtectKernelModules": "no",
+        "ProtectKernelTunables": "no",
+        "ProtectProc": "default",
+        "ProtectSystem": "no",
+        "RefuseManualStart": "no",
+        "RefuseManualStop": "no",
+        "ReloadResult": "success",
+        "RemainAfterExit": "no",
+        "RemoveIPC": "no",
+        "Requires": "system.slice sysinit.target -.mount",
+        "RequiresMountsFor": "/var/tmp",
+        "Restart": "on-abort",
+        "RestartKillSignal": "15",
+        "RestartUSec": "100ms",
+        "RestrictNamespaces": "no",
+        "RestrictRealtime": "no",
+        "RestrictSUIDSGID": "no",
+        "Result": "success",
+        "RootDirectoryStartOnly": "no",
+        "RuntimeDirectoryMode": "0755",
+        "RuntimeDirectoryPreserve": "no",
+        "RuntimeMaxUSec": "infinity",
+        "SameProcessGroup": "no",
+        "SecureBits": "0",
+        "SendSIGHUP": "no",
+        "SendSIGKILL": "yes",
+        "Slice": "system.slice",
+        "StandardError": "inherit",
+        "StandardInput": "null",
+        "StandardOutput": "journal",
+        "StartLimitAction": "none",
+        "StartLimitBurst": "5",
+        "StartLimitIntervalUSec": "10s",
+        "StartupBlockIOWeight": "[not set]",
+        "StartupCPUShares": "[not set]",
+        "StartupCPUWeight": "[not set]",
+        "StartupIOWeight": "[not set]",
+        "StateChangeTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "StateChangeTimestampMonotonic": "7000306164",
+        "StateDirectoryMode": "0755",
+        "StatusErrno": "0",
+        "StopWhenUnneeded": "no",
+        "SubState": "running",
+        "SuccessAction": "none",
+        "SyslogFacility": "3",
+        "SyslogLevel": "6",
+        "SyslogLevelPrefix": "yes",
+        "SyslogPriority": "30",
+        "SystemCallErrorNumber": "2147483646",
+        "TTYReset": "no",
+        "TTYVHangup": "no",
+        "TTYVTDisallocate": "no",
+        "TasksAccounting": "yes",
+        "TasksCurrent": "55",
+        "TasksMax": "1073",
+        "TimeoutAbortUSec": "1min 30s",
+        "TimeoutCleanUSec": "infinity",
+        "TimeoutStartFailureMode": "terminate",
+        "TimeoutStartUSec": "1min 30s",
+        "TimeoutStopFailureMode": "terminate",
+        "TimeoutStopUSec": "1min 30s",
+        "TimerSlackNSec": "50000",
+        "Transient": "no",
+        "Type": "forking",
+        "UID": "[not set]",
+        "UMask": "0022",
+        "UnitFilePreset": "enabled",
+        "UnitFileState": "enabled",
+        "UtmpMode": "init",
+        "WantedBy": "multi-user.target",
+        "Wants": "tmp.mount",
+        "WatchdogSignal": "6",
+        "WatchdogTimestamp": "n/a",
+        "WatchdogTimestampMonotonic": "0",
+        "WatchdogUSec": "0"
+    }
+}
+2025-11-29 21:03:50,865 p=5374 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web2' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 21:03:50,868 p=5374 u=gladkyi n=ansible INFO| web2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "name": "apache2",
+    "status": {
+        "ActiveEnterTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "ActiveEnterTimestampMonotonic": "6999449957",
+        "ActiveExitTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "ActiveExitTimestampMonotonic": "6999382950",
+        "ActiveState": "active",
+        "After": "systemd-journald.socket remote-fs.target nss-lookup.target -.mount basic.target tmp.mount network.target sysinit.target system.slice systemd-tmpfiles-setup.service",
+        "AllowIsolate": "no",
+        "AssertResult": "yes",
+        "AssertTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "AssertTimestampMonotonic": "6999424569",
+        "Before": "shutdown.target multi-user.target apache-htcacheclean.service",
+        "BlockIOAccounting": "no",
+        "BlockIOWeight": "[not set]",
+        "CPUAccounting": "yes",
+        "CPUAffinityFromNUMA": "no",
+        "CPUQuotaPerSecUSec": "infinity",
+        "CPUQuotaPeriodUSec": "infinity",
+        "CPUSchedulingPolicy": "0",
+        "CPUSchedulingPriority": "0",
+        "CPUSchedulingResetOnFork": "no",
+        "CPUShares": "[not set]",
+        "CPUUsageNSec": "60044000",
+        "CPUWeight": "[not set]",
+        "CacheDirectoryMode": "0755",
+        "CanFreeze": "yes",
+        "CanIsolate": "no",
+        "CanReload": "yes",
+        "CanStart": "yes",
+        "CanStop": "yes",
+        "CapabilityBoundingSet": "cap_chown cap_dac_override cap_dac_read_search cap_fowner cap_fsetid cap_kill cap_setgid cap_setuid cap_setpcap cap_linux_immutable cap_net_bind_service cap_net_broadcast cap_net_admin cap_net_raw cap_ipc_lock cap_ipc_owner cap_sys_module cap_sys_rawio cap_sys_chroot cap_sys_ptrace cap_sys_pacct cap_sys_admin cap_sys_boot cap_sys_nice cap_sys_resource cap_sys_time cap_sys_tty_config cap_mknod cap_lease cap_audit_write cap_audit_control cap_setfcap cap_mac_override cap_mac_admin cap_syslog cap_wake_alarm cap_block_suspend cap_audit_read cap_perfmon cap_bpf cap_checkpoint_restore",
+        "CleanResult": "success",
+        "CollectMode": "inactive",
+        "ConditionResult": "yes",
+        "ConditionTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "ConditionTimestampMonotonic": "6999424568",
+        "ConfigurationDirectoryMode": "0755",
+        "Conflicts": "shutdown.target",
+        "ControlGroup": "/system.slice/apache2.service",
+        "ControlPID": "0",
+        "CoredumpFilter": "0x33",
+        "DefaultDependencies": "yes",
+        "DefaultMemoryLow": "0",
+        "DefaultMemoryMin": "0",
+        "Delegate": "no",
+        "Description": "The Apache HTTP Server",
+        "DevicePolicy": "auto",
+        "Documentation": "https://httpd.apache.org/docs/2.4/",
+        "DynamicUser": "no",
+        "EffectiveCPUs": "0-1",
+        "EffectiveMemoryNodes": "0",
+        "Environment": "APACHE_STARTED_BY_SYSTEMD=true",
+        "ExecMainCode": "0",
+        "ExecMainExitTimestamp": "n/a",
+        "ExecMainExitTimestampMonotonic": "0",
+        "ExecMainPID": "8212",
+        "ExecMainStartTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "ExecMainStartTimestampMonotonic": "6999449924",
+        "ExecMainStatus": "0",
+        "ExecReload": "{ path=/usr/sbin/apachectl ; argv[]=/usr/sbin/apachectl graceful ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }",
+        "ExecReloadEx": "{ path=/usr/sbin/apachectl ; argv[]=/usr/sbin/apachectl graceful ; flags= ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }",
+        "ExecStart": "{ path=/usr/sbin/apachectl ; argv[]=/usr/sbin/apachectl start ; ignore_errors=no ; start_time=[Sat 2025-11-29 19:55:21 UTC] ; stop_time=[Sat 2025-11-29 19:55:21 UTC] ; pid=8208 ; code=exited ; status=0 }",
+        "ExecStartEx": "{ path=/usr/sbin/apachectl ; argv[]=/usr/sbin/apachectl start ; flags= ; start_time=[Sat 2025-11-29 19:55:21 UTC] ; stop_time=[Sat 2025-11-29 19:55:21 UTC] ; pid=8208 ; code=exited ; status=0 }",
+        "ExecStop": "{ path=/usr/sbin/apachectl ; argv[]=/usr/sbin/apachectl graceful-stop ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }",
+        "ExecStopEx": "{ path=/usr/sbin/apachectl ; argv[]=/usr/sbin/apachectl graceful-stop ; flags= ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }",
+        "FailureAction": "none",
+        "FileDescriptorStoreMax": "0",
+        "FinalKillSignal": "9",
+        "FragmentPath": "/lib/systemd/system/apache2.service",
+        "FreezerState": "running",
+        "GID": "[not set]",
+        "GuessMainPID": "yes",
+        "IOAccounting": "no",
+        "IOReadBytes": "18446744073709551615",
+        "IOReadOperations": "18446744073709551615",
+        "IOSchedulingClass": "2",
+        "IOSchedulingPriority": "4",
+        "IOWeight": "[not set]",
+        "IOWriteBytes": "18446744073709551615",
+        "IOWriteOperations": "18446744073709551615",
+        "IPAccounting": "no",
+        "IPEgressBytes": "[no data]",
+        "IPEgressPackets": "[no data]",
+        "IPIngressBytes": "[no data]",
+        "IPIngressPackets": "[no data]",
+        "Id": "apache2.service",
+        "IgnoreOnIsolate": "no",
+        "IgnoreSIGPIPE": "yes",
+        "InactiveEnterTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "InactiveEnterTimestampMonotonic": "6999423565",
+        "InactiveExitTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "InactiveExitTimestampMonotonic": "6999428597",
+        "InvocationID": "081d5e5e01a14edfbae71d9d9315dd02",
+        "JobRunningTimeoutUSec": "infinity",
+        "JobTimeoutAction": "none",
+        "JobTimeoutUSec": "infinity",
+        "KeyringMode": "private",
+        "KillMode": "mixed",
+        "KillSignal": "15",
+        "LimitAS": "infinity",
+        "LimitASSoft": "infinity",
+        "LimitCORE": "infinity",
+        "LimitCORESoft": "0",
+        "LimitCPU": "infinity",
+        "LimitCPUSoft": "infinity",
+        "LimitDATA": "infinity",
+        "LimitDATASoft": "infinity",
+        "LimitFSIZE": "infinity",
+        "LimitFSIZESoft": "infinity",
+        "LimitLOCKS": "infinity",
+        "LimitLOCKSSoft": "infinity",
+        "LimitMEMLOCK": "8388608",
+        "LimitMEMLOCKSoft": "8388608",
+        "LimitMSGQUEUE": "819200",
+        "LimitMSGQUEUESoft": "819200",
+        "LimitNICE": "0",
+        "LimitNICESoft": "0",
+        "LimitNOFILE": "524288",
+        "LimitNOFILESoft": "1024",
+        "LimitNPROC": "3577",
+        "LimitNPROCSoft": "3577",
+        "LimitRSS": "infinity",
+        "LimitRSSSoft": "infinity",
+        "LimitRTPRIO": "0",
+        "LimitRTPRIOSoft": "0",
+        "LimitRTTIME": "infinity",
+        "LimitRTTIMESoft": "infinity",
+        "LimitSIGPENDING": "3577",
+        "LimitSIGPENDINGSoft": "3577",
+        "LimitSTACK": "infinity",
+        "LimitSTACKSoft": "8388608",
+        "LoadState": "loaded",
+        "LockPersonality": "no",
+        "LogLevelMax": "-1",
+        "LogRateLimitBurst": "0",
+        "LogRateLimitIntervalUSec": "0",
+        "LogsDirectoryMode": "0755",
+        "MainPID": "8212",
+        "ManagedOOMMemoryPressure": "auto",
+        "ManagedOOMMemoryPressureLimit": "0",
+        "ManagedOOMPreference": "none",
+        "ManagedOOMSwap": "auto",
+        "MemoryAccounting": "yes",
+        "MemoryAvailable": "infinity",
+        "MemoryCurrent": "5464064",
+        "MemoryDenyWriteExecute": "no",
+        "MemoryHigh": "infinity",
+        "MemoryLimit": "infinity",
+        "MemoryLow": "0",
+        "MemoryMax": "infinity",
+        "MemoryMin": "0",
+        "MemorySwapMax": "infinity",
+        "MountAPIVFS": "no",
+        "NFileDescriptorStore": "0",
+        "NRestarts": "0",
+        "NUMAPolicy": "n/a",
+        "Names": "apache2.service",
+        "NeedDaemonReload": "no",
+        "Nice": "0",
+        "NoNewPrivileges": "no",
+        "NonBlocking": "no",
+        "NotifyAccess": "none",
+        "OOMPolicy": "stop",
+        "OOMScoreAdjust": "0",
+        "OnFailureJobMode": "replace",
+        "OnSuccessJobMode": "fail",
+        "Perpetual": "no",
+        "PrivateDevices": "no",
+        "PrivateIPC": "no",
+        "PrivateMounts": "no",
+        "PrivateNetwork": "no",
+        "PrivateTmp": "yes",
+        "PrivateUsers": "no",
+        "ProcSubset": "all",
+        "ProtectClock": "no",
+        "ProtectControlGroups": "no",
+        "ProtectHome": "no",
+        "ProtectHostname": "no",
+        "ProtectKernelLogs": "no",
+        "ProtectKernelModules": "no",
+        "ProtectKernelTunables": "no",
+        "ProtectProc": "default",
+        "ProtectSystem": "no",
+        "RefuseManualStart": "no",
+        "RefuseManualStop": "no",
+        "ReloadResult": "success",
+        "RemainAfterExit": "no",
+        "RemoveIPC": "no",
+        "Requires": "sysinit.target -.mount system.slice",
+        "RequiresMountsFor": "/var/tmp",
+        "Restart": "on-abort",
+        "RestartKillSignal": "15",
+        "RestartUSec": "100ms",
+        "RestrictNamespaces": "no",
+        "RestrictRealtime": "no",
+        "RestrictSUIDSGID": "no",
+        "Result": "success",
+        "RootDirectoryStartOnly": "no",
+        "RuntimeDirectoryMode": "0755",
+        "RuntimeDirectoryPreserve": "no",
+        "RuntimeMaxUSec": "infinity",
+        "SameProcessGroup": "no",
+        "SecureBits": "0",
+        "SendSIGHUP": "no",
+        "SendSIGKILL": "yes",
+        "Slice": "system.slice",
+        "StandardError": "inherit",
+        "StandardInput": "null",
+        "StandardOutput": "journal",
+        "StartLimitAction": "none",
+        "StartLimitBurst": "5",
+        "StartLimitIntervalUSec": "10s",
+        "StartupBlockIOWeight": "[not set]",
+        "StartupCPUShares": "[not set]",
+        "StartupCPUWeight": "[not set]",
+        "StartupIOWeight": "[not set]",
+        "StateChangeTimestamp": "Sat 2025-11-29 19:55:21 UTC",
+        "StateChangeTimestampMonotonic": "6999449957",
+        "StateDirectoryMode": "0755",
+        "StatusErrno": "0",
+        "StopWhenUnneeded": "no",
+        "SubState": "running",
+        "SuccessAction": "none",
+        "SyslogFacility": "3",
+        "SyslogLevel": "6",
+        "SyslogLevelPrefix": "yes",
+        "SyslogPriority": "30",
+        "SystemCallErrorNumber": "2147483646",
+        "TTYReset": "no",
+        "TTYVHangup": "no",
+        "TTYVTDisallocate": "no",
+        "TasksAccounting": "yes",
+        "TasksCurrent": "55",
+        "TasksMax": "1073",
+        "TimeoutAbortUSec": "1min 30s",
+        "TimeoutCleanUSec": "infinity",
+        "TimeoutStartFailureMode": "terminate",
+        "TimeoutStartUSec": "1min 30s",
+        "TimeoutStopFailureMode": "terminate",
+        "TimeoutStopUSec": "1min 30s",
+        "TimerSlackNSec": "50000",
+        "Transient": "no",
+        "Type": "forking",
+        "UID": "[not set]",
+        "UMask": "0022",
+        "UnitFilePreset": "enabled",
+        "UnitFileState": "enabled",
+        "UtmpMode": "init",
+        "WantedBy": "multi-user.target",
+        "Wants": "tmp.mount",
+        "WatchdogSignal": "6",
+        "WatchdogTimestamp": "n/a",
+        "WatchdogTimestampMonotonic": "0",
+        "WatchdogUSec": "0"
+    }
+}
+2025-11-29 21:05:08,183 p=5429 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 21:05:08,183 p=5429 u=gladkyi n=ansible ERROR| [ERROR]: Task failed: Module failed: Unable to stop service apache2: Failed to stop apache2.service: Connection timed out
+See system logs and 'systemctl status apache2.service' for details.
+
+Origin: <adhoc 'systemd' task>
+
+{'action': 'systemd', 'args': {'name': 'apache2', 'state': 'stopped'}, 'timeout': 0, 'async_val': 0, 'poll': 15}
+
+
+2025-11-29 21:05:08,184 p=5429 u=gladkyi n=ansible INFO| web1 | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.10"
+    },
+    "changed": false,
+    "msg": "Unable to stop service apache2: Failed to stop apache2.service: Connection timed out\nSee system logs and 'systemctl status apache2.service' for details.\n"
+}
+2025-11-29 21:13:23,405 p=5629 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 21:13:23,405 p=5629 u=gladkyi n=ansible INFO| web1 | CHANGED | rc=0 >>
+
+
+2025-11-29 21:17:21,177 p=5723 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 21:17:21,177 p=5723 u=gladkyi n=ansible ERROR| [ERROR]: Task failed: Module failed: non-zero return code
+Origin: <adhoc 'shell' task>
+
+{'action': 'shell', 'args': {'_raw_params': 'systemctl status apache2'}, 'timeout': 0, 'async_val': 0, 'poll': 15}
+
+
+2025-11-29 21:17:21,178 p=5723 u=gladkyi n=ansible INFO| web1 | FAILED | rc=3 >>
+○ apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: inactive (dead) since Sat 2025-11-29 20:13:22 UTC; 3min 57s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 7465 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+    Process: 8661 ExecStop=/usr/sbin/apachectl graceful-stop (code=exited, status=0/SUCCESS)
+   Main PID: 7469 (code=exited, status=0/SUCCESS)
+        CPU: 113ms
+
+Nov 29 19:55:21 ip-172-31-21-85 systemd[1]: Starting The Apache HTTP Server...
+Nov 29 19:55:21 ip-172-31-21-85 systemd[1]: Started The Apache HTTP Server.
+Nov 29 20:13:22 ip-172-31-21-85 systemd[1]: Stopping The Apache HTTP Server...
+Nov 29 20:13:22 ip-172-31-21-85 systemd[1]: apache2.service: Deactivated successfully.
+Nov 29 20:13:22 ip-172-31-21-85 systemd[1]: Stopped The Apache HTTP Server.non-zero return code
+
+2025-11-29 21:17:21,186 p=5723 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web2' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 21:17:21,186 p=5723 u=gladkyi n=ansible INFO| web2 | CHANGED | rc=0 >>
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2025-11-29 19:55:21 UTC; 21min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 8208 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+   Main PID: 8212 (apache2)
+      Tasks: 55 (limit: 1073)
+     Memory: 5.2M
+        CPU: 110ms
+     CGroup: /system.slice/apache2.service
+             ├─8212 /usr/sbin/apache2 -k start
+             ├─8213 /usr/sbin/apache2 -k start
+             └─8214 /usr/sbin/apache2 -k start
+
+Nov 29 19:55:21 ip-172-31-17-42 systemd[1]: Starting The Apache HTTP Server...
+Nov 29 19:55:21 ip-172-31-17-42 systemd[1]: Started The Apache HTTP Server.
+
+2025-11-29 21:42:28,962 p=6186 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 21:42:28,963 p=6186 u=gladkyi n=ansible INFO| web1 | CHANGED | rc=0 >>
+
+
+2025-11-29 22:07:44,834 p=6594 u=gladkyi n=ansible INFO| PLAY [Configure web servers (Ubuntu only)] ***************************************************************************************************************************************************************
+2025-11-29 22:07:44,837 p=6594 u=gladkyi n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-11-29 22:07:49,775 p=6594 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 22:07:49,775 p=6594 u=gladkyi n=ansible INFO| ok: [web1]
+2025-11-29 22:07:49,871 p=6594 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web2' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 22:07:49,872 p=6594 u=gladkyi n=ansible INFO| ok: [web2]
+2025-11-29 22:07:49,875 p=6594 u=gladkyi n=ansible INFO| TASK [webserver : Update apt cache] **********************************************************************************************************************************************************************
+2025-11-29 22:07:54,997 p=6594 u=gladkyi n=ansible INFO| changed: [web1]
+2025-11-29 22:07:55,294 p=6594 u=gladkyi n=ansible INFO| changed: [web2]
+2025-11-29 22:07:55,297 p=6594 u=gladkyi n=ansible INFO| TASK [webserver : Install webserver package] *************************************************************************************************************************************************************
+2025-11-29 22:07:59,353 p=6594 u=gladkyi n=ansible INFO| ok: [web1]
+2025-11-29 22:07:59,415 p=6594 u=gladkyi n=ansible INFO| ok: [web2]
+2025-11-29 22:07:59,421 p=6594 u=gladkyi n=ansible INFO| TASK [webserver : Deploy virtual host configuration from template] ***************************************************************************************************************************************
+2025-11-29 22:08:05,907 p=6594 u=gladkyi n=ansible INFO| ok: [web1]
+2025-11-29 22:08:06,559 p=6594 u=gladkyi n=ansible INFO| ok: [web2]
+2025-11-29 22:08:06,565 p=6594 u=gladkyi n=ansible INFO| TASK [webserver : Deploy custom index page with host IP and greeting] ************************************************************************************************************************************
+2025-11-29 22:08:11,439 p=6594 u=gladkyi n=ansible INFO| ok: [web1]
+2025-11-29 22:08:12,210 p=6594 u=gladkyi n=ansible INFO| ok: [web2]
+2025-11-29 22:08:12,218 p=6594 u=gladkyi n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-11-29 22:08:12,218 p=6594 u=gladkyi n=ansible INFO| web1                       : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-29 22:08:12,218 p=6594 u=gladkyi n=ansible INFO| web2                       : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-29 22:18:01,278 p=6870 u=gladkyi n=ansible INFO| PLAY [Configure web servers (Ubuntu only)] ***************************************************************************************************************************************************************
+2025-11-29 22:18:01,283 p=6870 u=gladkyi n=ansible INFO| TASK [Gathering Facts] ***********************************************************************************************************************************************************************************
+2025-11-29 22:18:07,915 p=6870 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web2' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 22:18:07,915 p=6870 u=gladkyi n=ansible INFO| ok: [web2]
+2025-11-29 22:18:08,230 p=6870 u=gladkyi n=ansible WARNING| [WARNING]: Host 'web1' is using the discovered Python interpreter at '/usr/bin/python3.10', but future installation of another Python interpreter could cause a different interpreter to be discovered. See https://docs.ansible.com/ansible-core/2.19/reference_appendices/interpreter_discovery.html for more information.
+
+2025-11-29 22:18:08,230 p=6870 u=gladkyi n=ansible INFO| ok: [web1]
+2025-11-29 22:18:08,234 p=6870 u=gladkyi n=ansible INFO| TASK [webserver : Update apt cache] **********************************************************************************************************************************************************************
+2025-11-29 22:18:13,360 p=6870 u=gladkyi n=ansible INFO| changed: [web1]
+2025-11-29 22:18:13,361 p=6870 u=gladkyi n=ansible INFO| changed: [web2]
+2025-11-29 22:18:13,364 p=6870 u=gladkyi n=ansible INFO| TASK [webserver : Install webserver package] *************************************************************************************************************************************************************
+2025-11-29 22:18:17,443 p=6870 u=gladkyi n=ansible INFO| ok: [web2]
+2025-11-29 22:18:17,505 p=6870 u=gladkyi n=ansible INFO| ok: [web1]
+2025-11-29 22:18:17,510 p=6870 u=gladkyi n=ansible INFO| TASK [webserver : Deploy virtual host configuration from template] ***************************************************************************************************************************************
+2025-11-29 22:18:23,636 p=6870 u=gladkyi n=ansible INFO| changed: [web1]
+2025-11-29 22:18:23,669 p=6870 u=gladkyi n=ansible INFO| changed: [web2]
+2025-11-29 22:18:23,673 p=6870 u=gladkyi n=ansible INFO| TASK [webserver : Deploy custom index page with host IP and greeting] ************************************************************************************************************************************
+2025-11-29 22:18:28,715 p=6870 u=gladkyi n=ansible INFO| ok: [web2]
+2025-11-29 22:18:28,725 p=6870 u=gladkyi n=ansible INFO| ok: [web1]
+2025-11-29 22:18:28,737 p=6870 u=gladkyi n=ansible INFO| RUNNING HANDLER [webserver : restart webserver] **********************************************************************************************************************************************************
+2025-11-29 22:18:32,222 p=6870 u=gladkyi n=ansible INFO| changed: [web2]
+2025-11-29 22:18:32,224 p=6870 u=gladkyi n=ansible INFO| changed: [web1]
+2025-11-29 22:18:32,225 p=6870 u=gladkyi n=ansible INFO| PLAY RECAP ***********************************************************************************************************************************************************************************************
+2025-11-29 22:18:32,225 p=6870 u=gladkyi n=ansible INFO| web1                       : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-11-29 22:18:32,225 p=6870 u=gladkyi n=ansible INFO| web2                       : ok=6    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

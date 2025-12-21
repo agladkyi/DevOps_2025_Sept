@@ -12,12 +12,12 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-west-3"
 }
 
 # Existing EC2 key pair name (so you can SSH in)
 variable "key_name" {
   description = "Name of an existing AWS key pair to use for SSH"
   type        = string
-  default     = "ansible2"
+  default     = "KeyPairAWS"
 }
