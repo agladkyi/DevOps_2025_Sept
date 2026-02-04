@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-metrics-logs
+  namespace: demo
+  labels:
+    app: demo-metrics-logs
+spec:
+  selector:
+    app: demo-metrics-logs
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8080

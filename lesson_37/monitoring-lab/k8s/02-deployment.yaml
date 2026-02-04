@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-metrics-logs
+  namespace: demo
+  labels:
+    app: demo-metrics-logs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-metrics-logs
+  template:
+    metadata:
+      labels:
+        app: demo-metrics-logs
+    spec:
+      containers:
+        - name: app
+          image: demo-metrics-logs:1.3.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              name: http
+          env:
+            - name: LOG_LEVEL
+              value: INFO

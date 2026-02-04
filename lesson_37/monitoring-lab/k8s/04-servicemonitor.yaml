@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: demo-metrics-logs
+  namespace: demo
+  labels:
+    release: mon # IMPORTANT: must match your Helm release name
+spec:
+  selector:
+    matchLabels:
+      app: demo-metrics-logs
+  namespaceSelector:
+    matchNames:
+      - demo
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s

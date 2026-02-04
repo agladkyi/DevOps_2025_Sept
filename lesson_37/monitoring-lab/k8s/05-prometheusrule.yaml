@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: demo-alerts
+  namespace: demo
+  labels:
+    release: mon # must match Helm release name
+spec:
+  groups:
+    - name: demo.rules
+      rules:
+        - alert: DemoHigh5xxRate
+          expr: sum(rate(http_requests_total{path="/fail",status=~"5.."}[2m])) > 0.2
+          for: 1m
+          labels:
+            severity: warning
+          annotations:
+            summary: "High 5xx rate on /fail"
+            description: "The demo app is returning too many 500s on /fail."
